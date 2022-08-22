@@ -1,0 +1,34 @@
+{
+    "name": "test/commission-task-skeleton",
+    "description": "Skeleton for Commision task",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Commision\\CommissionTask\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Commision\\CommissionTask\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "ext-bcmath": "*",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "2.16"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
