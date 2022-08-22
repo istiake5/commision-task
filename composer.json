@@ -5,12 +5,12 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Commision\\CommissionTask\\": "src"
+            "": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Commision\\CommissionTask\\Tests\\": "tests"
+             "Tests\\": "tests/"
         }
     },
     "require": {
