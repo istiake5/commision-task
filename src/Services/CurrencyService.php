@@ -14,11 +14,11 @@ class CurrencyService
 
     public function __construct($currencies)
     {
-        $this->currencies = $currencies;
-        $this->currencies[] = 'EUR';
+                          $this->currencies = $currencies;
+        $this->currencies[]                 = 'EUR';
 
         $this->apiBaseUrl = 'http://api.exchangeratesapi.io/v1';
-        $this->accessKey = '374c29fa9d2984c45b8abea52445230d';
+        $this->accessKey  = '374c29fa9d2984c45b8abea52445230d';
         $this->loadLatestRates();
     }
 

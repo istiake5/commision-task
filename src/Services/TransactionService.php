@@ -21,15 +21,15 @@ class TransactionService
     public function __construct($file, $commissionCharge)
     {
         $currencies = [];
-        $rows = (new CSVConverter($file))()->getRows();
+        $rows       = (new CSVConverter($file))()->getRows();
         foreach ($rows as $row) {
-            $transaction = new Transaction($row);
-            $currencies[] = $transaction->getCurrency();
-            $this->transactions[] = $transaction;
+                                $transaction = new Transaction($row);
+            $currencies        []            = $transaction->getCurrency();
+            $this->transactions[]            = $transaction;
         }
 
         $this->commissionCharge = @json_decode(json_encode($commissionCharge)) ;
-        $this->currencyService = new CurrencyService($currencies);
+        $this->currencyService  = new CurrencyService($currencies);
     }
 
     public function calculateCommission(): TransactionService
@@ -53,8 +53,8 @@ class TransactionService
         }
 
         //get config data for personal transaction
-        $configCharge = $this->commissionCharge->withdraw->private;
-        $configWeeklyLimit = $this->commissionCharge->weeklyLimit->count;
+        $configCharge            = $this->commissionCharge->withdraw->private;
+        $configWeeklyLimit       = $this->commissionCharge->weeklyLimit->count;
         $configWeeklyLimitAmount = $this->commissionCharge->weeklyLimit->amount;
 
         //get weekly details

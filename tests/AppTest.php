@@ -9,8 +9,8 @@ final class AppTest extends TestCase
 {
     public function testMain(): void
     {
-        $file = 'input.csv';
-        $app = new \App($file);
+        $file                = 'input.csv';
+        $app                 = new \App($file);
         $transactionServices = $app->getTransactionService();
         $transactionServices->getCurrencyService()->setRates([
         'EUR' => 1,

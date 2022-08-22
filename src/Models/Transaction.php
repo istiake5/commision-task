@@ -13,13 +13,13 @@ class Transaction
 
     public function __construct($arg)
     {
-        $this->id = uniqid();
-        $this->date = $arg[0];
-        $this->accountId = $arg[1];
+        $this->id          = uniqid();
+        $this->date        = $arg[0];
+        $this->accountId   = $arg[1];
         $this->accountType = $arg[2];
-        $this->type = $arg[3];
-        $this->amount = $arg[4];
-        $this->currency = $arg[5];
+        $this->type        = $arg[3];
+        $this->amount      = $arg[4];
+        $this->currency    = $arg[5];
     }
 
     public function account(): Account
